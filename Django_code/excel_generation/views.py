@@ -18,8 +18,12 @@ def excel_file(request):
     # Sheet header, first row
     font_style = xlwt.XFStyle()
     font_style.font.bold = True
+    font_style.font.family
+
+    ws.write_merge(0, 0, 1, 3, 'User Record', font_style)
+
     columns = ['Username', 'First name', 'Last name', 'Email address', 'Last login']
-    row_num = 0
+    row_num = 2
     for col_num in range(len(columns)):
         ws.write(row_num, col_num, columns[col_num], font_style)
 
