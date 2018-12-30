@@ -18,7 +18,6 @@ def excel_file(request):
     # Sheet header, first row
     font_style = xlwt.XFStyle()
     font_style.font.bold = True
-    font_style.font.family
 
     ws.write_merge(0, 0, 1, 3, 'User Record', font_style)
 
