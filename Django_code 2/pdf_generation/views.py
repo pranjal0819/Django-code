@@ -19,8 +19,8 @@ def pdf_file(request):
     if not pdf.err:
         response = HttpResponse(result.getvalue(), content_type='application/pdf')
         filename = "pdf_file.pdf"
-        # content = "inline; filename='%s'" % filename
-        content = "attachment; filename='%s'" % filename
+        # content = "inline; filename=%s" % filename
+        content = "attachment; filename=%s" % filename
         response['Content-Disposition'] = content
         return response
     return HttpResponse("Error")

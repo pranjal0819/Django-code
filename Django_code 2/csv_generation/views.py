@@ -8,8 +8,8 @@ from django.http import HttpResponse
 def csv_file(request):
     response = HttpResponse(content_type='text/csv')
     filename = 'csv_file.csv'
-    # content = "inline; filename='%s'" % filename
-    content = "attachment; filename='%s'" % filename
+    # content = "inline; filename=%s" % filename
+    content = "attachment; filename=%s" % filename
     response['Content-Disposition'] = content
 
     writer = csv.writer(response)
