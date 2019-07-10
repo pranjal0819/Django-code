@@ -1,0 +1,10 @@
+{% autoescape off %}
+This is testing email
+-----------------------------------
+Dear {{ sender_name }},
+{{ mess }}
+...
+
+Best regards,
+Pranjal Kushwaha
+{% endautoescape %}
