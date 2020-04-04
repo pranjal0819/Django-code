@@ -1,3 +1,0 @@
-pip install django
-pip install --pre xhtml2pdf
-pip install xlwt
